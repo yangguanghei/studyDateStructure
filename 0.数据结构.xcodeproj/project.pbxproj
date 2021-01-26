@@ -15,6 +15,7 @@
 		C17B1A5B25BF13D100D6E12B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C17B1A5925BF13D100D6E12B /* LaunchScreen.storyboard */; };
 		C17B1A6625BF13D100D6E12B /* ______Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17B1A6525BF13D100D6E12B /* ______Tests.swift */; };
 		C17B1A7125BF13D100D6E12B /* ______UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17B1A7025BF13D100D6E12B /* ______UITests.swift */; };
+		C17B1A8225BF140D00D6E12B /* LinkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17B1A8125BF140D00D6E12B /* LinkList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		C17B1A6C25BF13D100D6E12B /* 0.数据结构UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "0.数据结构UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C17B1A7025BF13D100D6E12B /* ______UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "______UITests.swift"; sourceTree = "<group>"; };
 		C17B1A7225BF13D100D6E12B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C17B1A8125BF140D00D6E12B /* LinkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				C17B1A4E25BF13CE00D6E12B /* AppDelegate.swift */,
 				C17B1A5025BF13CE00D6E12B /* SceneDelegate.swift */,
 				C17B1A5225BF13CE00D6E12B /* ViewController.swift */,
+				C17B1A8125BF140D00D6E12B /* LinkList.swift */,
 				C17B1A5425BF13CE00D6E12B /* Main.storyboard */,
 				C17B1A5725BF13D100D6E12B /* Assets.xcassets */,
 				C17B1A5925BF13D100D6E12B /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 				C17B1A5325BF13CE00D6E12B /* ViewController.swift in Sources */,
 				C17B1A4F25BF13CE00D6E12B /* AppDelegate.swift in Sources */,
 				C17B1A5125BF13CE00D6E12B /* SceneDelegate.swift in Sources */,
+				C17B1A8225BF140D00D6E12B /* LinkList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +441,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K8ETH5Y5NB;
 				INFOPLIST_FILE = "0.数据结构/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,7 +461,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K8ETH5Y5NB;
 				INFOPLIST_FILE = "0.数据结构/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
