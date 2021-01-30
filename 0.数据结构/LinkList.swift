@@ -110,6 +110,27 @@ class LinkList {
         }
         return node?.item
     }
+    
+    /// 反转整个链表
+    func reverse() {
+        if isEmpty() == true {
+            return
+        }
+        let node = reverseNode(curNode: head.next)
+        print("\(node!.item ?? "")")
+    }
+    
+    /// 反转某个节点
+    private func reverseNode(curNode: Node?) -> Node? {
+        if curNode?.next == nil {
+            head.next = curNode
+            return curNode
+        }
+        let preNode = reverseNode(curNode: curNode?.next)
+        preNode?.next = curNode
+        curNode?.next = nil
+        return curNode
+    }
  
 }
 
