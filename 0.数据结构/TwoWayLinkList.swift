@@ -8,11 +8,11 @@
 import Foundation
 
 /// 节点类
-fileprivate class Node {
+fileprivate class TwoNode {
     var item: String?
-    var pre: Node?
-    var next: Node?
-    init(item: String?, pre: Node?, next: Node?) {
+    var pre: TwoNode?
+    var next: TwoNode?
+    init(item: String?, pre: TwoNode?, next: TwoNode?) {
         self.item = item
         self.pre = pre
         self.next = next
@@ -23,16 +23,16 @@ fileprivate class Node {
 class TwoWayLinkList {
     
     /// 头节点
-    private var head = Node(item: nil, pre: nil, next: nil)
+    private var head = TwoNode(item: nil, pre: nil, next: nil)
     /// 尾节点
-    private var footer = Node(item: nil, pre: nil, next: nil)
+    private var footer = TwoNode(item: nil, pre: nil, next: nil)
     /// 链表长度
     var length = 0
     
     /// 初始化链表
     init() {
-        self.head = Node(item: nil, pre: nil, next: nil)
-        self.footer = Node(item: nil, pre: nil, next: nil)
+        self.head = TwoNode(item: nil, pre: nil, next: nil)
+        self.footer = TwoNode(item: nil, pre: nil, next: nil)
         length = 0
     }
     
@@ -62,14 +62,14 @@ class TwoWayLinkList {
     
     func addItem(item: String) {
         if isEmpty() == true {
-            let newNode = Node(item: item, pre: head, next: nil)
-            head.next = newNode
-            footer = newNode
+            let newTwoNode = TwoNode(item: item, pre: head, next: nil)
+            head.next = newTwoNode
+            footer = newTwoNode
         } else {
             let oldFooter = footer
-            let newNode = Node(item: item, pre: oldFooter, next: nil)
-            oldFooter.next = newNode
-            footer = newNode
+            let newTwoNode = TwoNode(item: item, pre: oldFooter, next: nil)
+            oldFooter.next = newTwoNode
+            footer = newTwoNode
         }
         length += 1
     }
@@ -79,10 +79,10 @@ class TwoWayLinkList {
         for _ in 0..<index {
             pre = pre.next!
         }
-        let curNode = pre.next
-        let newNode = Node(item: item, pre: pre, next: curNode)
-        pre.next = newNode
-        curNode?.pre = newNode
+        let curTwoNode = pre.next
+        let newTwoNode = TwoNode(item: item, pre: pre, next: curTwoNode)
+        pre.next = newTwoNode
+        curTwoNode?.pre = newTwoNode
         length += 1
     }
     
@@ -110,12 +110,12 @@ class TwoWayLinkList {
         for _ in 0..<index {
             pre = pre.next!
         }
-        let curNode = pre.next
-        let nextNode = curNode?.next
-        pre.next = nextNode
-        nextNode?.pre = pre
+        let curTwoNode = pre.next
+        let nextTwoNode = curTwoNode?.next
+        pre.next = nextTwoNode
+        nextTwoNode?.pre = pre
         length -= 1
-        return curNode?.item
+        return curTwoNode?.item
     }
     
     /// 清空

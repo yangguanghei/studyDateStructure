@@ -8,7 +8,7 @@
 import Foundation
 
 /// 节点类
-fileprivate class Node {
+class Node: NSObject {
     var item: String?
     var next: Node?
     init(item: String?, next: Node?) {
