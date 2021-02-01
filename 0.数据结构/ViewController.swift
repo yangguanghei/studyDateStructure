@@ -21,11 +21,62 @@ class ViewController: UIViewController {
 //        testTwoWayLinkList()
 //        testMid()
 //        testCircle()
-        testEntrance()
+//        testEntrance()
+        testJoseph()
     }
 }
 
 extension ViewController {
+    
+    
+    /// 约瑟夫问题
+    private func testJoseph() {
+        
+        var firstNode = TNode<Int>(item: nil, next: nil)
+        var pre = TNode<Int>(item: nil, next: nil)
+        
+        // 创建循环链表
+        for i in 1...41 {
+            if i == 1 {
+                firstNode = TNode(item: i, next: nil)
+                pre = firstNode
+                continue
+            }
+            
+            let node = TNode(item: i, next: nil)
+            pre.next = node
+            pre = node
+            
+            if i == 41 {
+                pre.next = firstNode
+            }
+        }
+        
+//        var testNode = firstNode
+//        while testNode.next?.item != 1 {
+//            testNode = testNode.next!
+//            print("\(testNode.item ?? 0)")
+//        }
+        
+        var n = firstNode
+        var before = TNode<Int>(item: nil, next: nil)
+        var count = 0
+        /// 将计数为3的节点移除
+        while n.next != n {
+            count += 1
+            if count == 3 {
+                before.next = n.next
+                print("\(n.item ?? 0)")
+                count = 0
+                n = n.next!
+            } else {
+                before = n
+                n = n.next!
+            }
+        }
+        
+        print("最后剩下：\(n.item ?? 0)")
+    }
     
     /// 快慢指针获取环状链表的入口
     private func testEntrance() {
