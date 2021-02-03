@@ -22,12 +22,50 @@ class ViewController: UIViewController {
 //        testMid()
 //        testCircle()
 //        testEntrance()
-        testJoseph()
+//        testJoseph()
+//        testStack()
+        print("\(isMach(str: "(jdk()jkd()kaldjl())"))")
     }
 }
 
 extension ViewController {
     
+    /// 利用栈解决括号匹配问题
+    private func isMach(str: String) -> Bool {
+        var stack = Stack()
+        for char in str.enumerated() {
+            let s = char.element
+            if s == "(" {
+                stack.push(item: s)
+            } else if s == ")" {
+                let item = stack.pop()
+                if item == nil {
+                    return false
+                }
+            }
+        }
+        if stack.isEmpty() {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    /// 测试栈
+    private func testStack() {
+        var stack = Stack()
+        stack.push(item: "1")
+        stack.push(item: "2")
+        stack.push(item: "3")
+        stack.push(item: "4")
+        stack.push(item: "5")
+        stack.printStack()
+        print("^^^^^^^^^^^^")
+        let item = stack.pop()
+        print("\(item)")
+        print("^^^^^^^^^^^^")
+        stack.printStack()
+    }
     
     /// 约瑟夫问题
     private func testJoseph() {

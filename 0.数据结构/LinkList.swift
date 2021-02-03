@@ -17,15 +17,6 @@ class Node: NSObject {
     }
 }
 
-class TNode<T>: NSObject {
-    var item: T?
-    var next: TNode?
-    init(item: T?, next: TNode?) {
-        self.item = item
-        self.next = next
-    }
-}
-
 
 /// 链表
 class LinkList {
