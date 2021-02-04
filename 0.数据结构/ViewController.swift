@@ -24,11 +24,50 @@ class ViewController: UIViewController {
 //        testEntrance()
 //        testJoseph()
 //        testStack()
-        print("\(isMach(str: "(jdk()jkd()kaldjl())"))")
+//        print("\(isMach(str: "(jdk()jkd()kaldjl())"))")
+        testReversePolishNotation()
     }
 }
 
 extension ViewController {
+    
+    
+    /// 利用栈解决逆波兰表达式问题
+    private func testReversePolishNotation(){
+        var stack = Stack()
+        // 1+(1*2)-(2/1)=1
+        let strArray = ["1", "1", "2", "*", "+", "2", "1", "/", "-"]
+        for i in 0..<strArray.count {
+            let str = strArray[i]
+            switch str {
+            case "+":
+                let o1 = stack.pop() as! Int
+                let o2 = stack.pop() as! Int
+                let result = o2 + o1
+                stack.push(item: result)
+            case "-":
+                let o1 = stack.pop() as! Int
+                let o2 = stack.pop() as! Int
+                let result = o2 - o1
+                stack.push(item: result)
+            case "*":
+                let o1 = stack.pop() as! Int
+                let o2 = stack.pop() as! Int
+                let result = o2 * o1
+                stack.push(item: result)
+            case "/":
+                let o1 = stack.pop() as! Int
+                let o2 = stack.pop() as! Int
+                let result = o2 / o1
+                stack.push(item: result)
+            default:
+                let result = Int(str)!
+                stack.push(item: result)
+            }
+        }
+        let result = stack.pop() as! Int
+        print("\(result)")
+    }
     
     /// 利用栈解决括号匹配问题
     private func isMach(str: String) -> Bool {
