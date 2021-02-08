@@ -17,6 +17,7 @@ class ViewController: UIViewController {
 
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        testSymbolTable()
 //        testLink()
 //        testTwoWayLinkList()
 //        testMid()
@@ -26,11 +27,24 @@ class ViewController: UIViewController {
 //        testStack()
 //        print("\(isMach(str: "(jdk()jkd()kaldjl())"))")
 //        testReversePolishNotation()
-        testQueue()
+//        testQueue()
     }
 }
 
 extension ViewController {
+    
+    /// 测试符号表
+    private func testSymbolTable() {
+        var symbolTable = SymbolTable<String>()
+        symbolTable.put(key: "one", value: "1")
+        symbolTable.put(key: "two", value: "2")
+        symbolTable.put(key: "three", value: "3")
+        symbolTable.printSymbolTable()
+        let value = symbolTable.get(key: "three")
+        print(value)
+        symbolTable.delete(key: "two")
+        symbolTable.printSymbolTable()
+    }
     
     /// 测试队列
     private func testQueue() {
