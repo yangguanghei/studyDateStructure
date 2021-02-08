@@ -19,6 +19,7 @@
 		C17B1A8225BF140D00D6E12B /* LinkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17B1A8125BF140D00D6E12B /* LinkList.swift */; };
 		C1C10C5C25C996F6002DE7E4 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C10C5B25C996F6002DE7E4 /* Stack.swift */; };
 		C1C10C6125C99719002DE7E4 /* TNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C10C6025C99719002DE7E4 /* TNode.swift */; };
+		C1F9488C25D0F86100B9C4A1 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F9488B25D0F86100B9C4A1 /* Queue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		C17B1A8125BF140D00D6E12B /* LinkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkList.swift; sourceTree = "<group>"; };
 		C1C10C5B25C996F6002DE7E4 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		C1C10C6025C99719002DE7E4 /* TNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TNode.swift; sourceTree = "<group>"; };
+		C1F9488B25D0F86100B9C4A1 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				C17B1A8125BF140D00D6E12B /* LinkList.swift */,
 				C172F0B425C1B1C40043D94D /* TwoWayLinkList.swift */,
 				C1C10C5B25C996F6002DE7E4 /* Stack.swift */,
+				C1F9488B25D0F86100B9C4A1 /* Queue.swift */,
 				C17B1A5425BF13CE00D6E12B /* Main.storyboard */,
 				C17B1A5725BF13D100D6E12B /* Assets.xcassets */,
 				C17B1A5925BF13D100D6E12B /* LaunchScreen.storyboard */,
@@ -273,6 +276,7 @@
 				C172F0B525C1B1C40043D94D /* TwoWayLinkList.swift in Sources */,
 				C17B1A5325BF13CE00D6E12B /* ViewController.swift in Sources */,
 				C17B1A4F25BF13CE00D6E12B /* AppDelegate.swift in Sources */,
+				C1F9488C25D0F86100B9C4A1 /* Queue.swift in Sources */,
 				C17B1A5125BF13CE00D6E12B /* SceneDelegate.swift in Sources */,
 				C1C10C5C25C996F6002DE7E4 /* Stack.swift in Sources */,
 				C1C10C6125C99719002DE7E4 /* TNode.swift in Sources */,

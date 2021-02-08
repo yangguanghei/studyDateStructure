@@ -25,12 +25,25 @@ class ViewController: UIViewController {
 //        testJoseph()
 //        testStack()
 //        print("\(isMach(str: "(jdk()jkd()kaldjl())"))")
-        testReversePolishNotation()
+//        testReversePolishNotation()
+        testQueue()
     }
 }
 
 extension ViewController {
     
+    /// 测试队列
+    private func testQueue() {
+        var queue = Queue<String>()
+        queue.enQueue(item: "a")
+        queue.enQueue(item: "b")
+        queue.enQueue(item: "c")
+        queue.printQueue()
+        print("\(queue.size())")
+        let item = queue.deQueue()
+        print("\(item)")
+        print("\(queue.size())")
+    }
     
     /// 利用栈解决逆波兰表达式问题
     private func testReversePolishNotation(){
