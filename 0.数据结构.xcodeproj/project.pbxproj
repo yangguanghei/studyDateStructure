@@ -17,6 +17,8 @@
 		C17B1A6625BF13D100D6E12B /* ______Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17B1A6525BF13D100D6E12B /* ______Tests.swift */; };
 		C17B1A7125BF13D100D6E12B /* ______UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17B1A7025BF13D100D6E12B /* ______UITests.swift */; };
 		C17B1A8225BF140D00D6E12B /* LinkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17B1A8125BF140D00D6E12B /* LinkList.swift */; };
+		C18FA4EB25E1561300ABAC53 /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18FA4EA25E1561300ABAC53 /* BinaryTree.swift */; };
+		C19B829725DFF6120016C085 /* OrderSymbolTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19B829625DFF6120016C085 /* OrderSymbolTable.swift */; };
 		C1C10C5C25C996F6002DE7E4 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C10C5B25C996F6002DE7E4 /* Stack.swift */; };
 		C1C10C6125C99719002DE7E4 /* TNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C10C6025C99719002DE7E4 /* TNode.swift */; };
 		C1F9488C25D0F86100B9C4A1 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F9488B25D0F86100B9C4A1 /* Queue.swift */; };
@@ -57,6 +59,8 @@
 		C17B1A7025BF13D100D6E12B /* ______UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "______UITests.swift"; sourceTree = "<group>"; };
 		C17B1A7225BF13D100D6E12B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C17B1A8125BF140D00D6E12B /* LinkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkList.swift; sourceTree = "<group>"; };
+		C18FA4EA25E1561300ABAC53 /* BinaryTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
+		C19B829625DFF6120016C085 /* OrderSymbolTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSymbolTable.swift; sourceTree = "<group>"; };
 		C1C10C5B25C996F6002DE7E4 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		C1C10C6025C99719002DE7E4 /* TNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TNode.swift; sourceTree = "<group>"; };
 		C1F9488B25D0F86100B9C4A1 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 				C1C10C5B25C996F6002DE7E4 /* Stack.swift */,
 				C1F9488B25D0F86100B9C4A1 /* Queue.swift */,
 				C1F9489025D121E600B9C4A1 /* SymbolTable.swift */,
+				C19B829625DFF6120016C085 /* OrderSymbolTable.swift */,
+				C18FA4EA25E1561300ABAC53 /* BinaryTree.swift */,
 				C17B1A5425BF13CE00D6E12B /* Main.storyboard */,
 				C17B1A5725BF13D100D6E12B /* Assets.xcassets */,
 				C17B1A5925BF13D100D6E12B /* LaunchScreen.storyboard */,
@@ -282,7 +288,9 @@
 				C1F9489125D121E600B9C4A1 /* SymbolTable.swift in Sources */,
 				C1F9488C25D0F86100B9C4A1 /* Queue.swift in Sources */,
 				C17B1A5125BF13CE00D6E12B /* SceneDelegate.swift in Sources */,
+				C18FA4EB25E1561300ABAC53 /* BinaryTree.swift in Sources */,
 				C1C10C5C25C996F6002DE7E4 /* Stack.swift in Sources */,
+				C19B829725DFF6120016C085 /* OrderSymbolTable.swift in Sources */,
 				C1C10C6125C99719002DE7E4 /* TNode.swift in Sources */,
 				C17B1A8225BF140D00D6E12B /* LinkList.swift in Sources */,
 			);

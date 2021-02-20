@@ -17,7 +17,10 @@ class ViewController: UIViewController {
 
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        testSymbolTable()
+        
+        testBinaryTree()
+//        testOrderSymbolTable()
+//        testSymbolTable()
 //        testLink()
 //        testTwoWayLinkList()
 //        testMid()
@@ -32,6 +35,33 @@ class ViewController: UIViewController {
 }
 
 extension ViewController {
+    
+    /// 测试二叉树
+    private func testBinaryTree() {
+        let binaryTree = BinaryTree()
+        binaryTree.put(key: "1", value: "张三")
+        binaryTree.put(key: "2", value: "李四")
+        binaryTree.put(key: "3", value: "王五")
+        print(binaryTree.N)
+        let value = binaryTree.get(key: "2")
+        print(value!)
+        let value1 = binaryTree.delete(key: "2")!.value
+        print(value1!)
+        print(binaryTree.N)
+    }
+    
+    /// 测试有序符号表
+    private func testOrderSymbolTable() {
+        var orderSymbolTable = OrderSymbolTable<String>()
+        orderSymbolTable.put(key: "1", value: "张三")
+        orderSymbolTable.put(key: "2", value: "李四")
+        orderSymbolTable.put(key: "4", value: "赵六")
+        orderSymbolTable.put(key: "5", value: "田七")
+        orderSymbolTable.printSymbolTable()
+        print("==============================")
+        orderSymbolTable.put(key: "3", value: "王五")
+        orderSymbolTable.printSymbolTable()
+    }
     
     /// 测试符号表
     private func testSymbolTable() {
