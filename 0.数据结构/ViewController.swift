@@ -18,7 +18,9 @@ class ViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        testBinaryTree()
+        testErgodic()
+//        testGetMinMaxKey()
+//        testBinaryTree()
 //        testOrderSymbolTable()
 //        testSymbolTable()
 //        testLink()
@@ -35,6 +37,44 @@ class ViewController: UIViewController {
 }
 
 extension ViewController {
+    
+    /// 测试二叉树的前、中、后序遍历
+    private func testErgodic() {
+        let binaryTree = BinaryTree()
+        binaryTree.put(key: "E", value: "5")
+        binaryTree.put(key: "B", value: "2")
+        binaryTree.put(key: "G", value: "7")
+        binaryTree.put(key: "A", value: "1")
+        binaryTree.put(key: "D", value: "4")
+        binaryTree.put(key: "F", value: "6")
+        binaryTree.put(key: "H", value: "8")
+        binaryTree.put(key: "C", value: "3")
+//        print(binaryTree.getMinKey() ?? "")
+//        print(binaryTree.getMaxKey() ?? "")
+        print("=========前序遍历=========")
+        let queue = binaryTree.preErgodic()
+        queue.printQueue()
+        print("=========中序遍历=========")
+        let queue1 = binaryTree.middleErgodic()
+        queue1.printQueue()
+        print("=========后序遍历=========")
+        let queue2 = binaryTree.afterErgodic()
+        queue2.printQueue()
+        print("========层序遍历==========")
+        let queue3 = binaryTree.layerErgodic()
+        queue3.printQueue()
+    }
+    
+    /// 测试获取二叉树最小/最大key
+    private func testGetMinMaxKey() {
+        let binaryTree = BinaryTree()
+        binaryTree.put(key: "1", value: "张三")
+        binaryTree.put(key: "2", value: "李四")
+        binaryTree.put(key: "3", value: "王五")
+        binaryTree.put(key: "4", value: "赵六")
+        print(binaryTree.getMinKey() ?? "")
+        print(binaryTree.getMaxKey() ?? "")
+    }
     
     /// 测试二叉树
     private func testBinaryTree() {

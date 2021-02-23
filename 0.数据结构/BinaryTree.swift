@@ -7,6 +7,7 @@
 
 import Foundation
 
+// 节点
 class TreeNode {
     var left: TreeNode?
     var right: TreeNode?
@@ -62,7 +63,7 @@ class BinaryTree {
             return get(node: node?.right, key: key)
         } else if result == .orderedAscending { // key小就从左子树找
             return get(node: node?.left, key: key)
-        } else {    // key相等直接替换
+        } else {    // key相等
             return node?.value
         }
     }
@@ -106,5 +107,115 @@ class BinaryTree {
             node = miniNode
         }
         return node
+    }
+    
+    // 获取这个树中最小的key
+    func getMinKey() -> String? {
+        return (getMinNode(node: root)?.key)
+    }
+    // 获取指定树中最小的key所在的节点
+    func getMinNode(node: TreeNode?) -> TreeNode? {
+        if node?.left != nil {
+            return getMinNode(node: node?.left)
+        } else {
+            return node
+        }
+    }
+    
+    // 获取这个树中最大的key
+    func getMaxKey() -> String? {
+        return (getMaxNode(node: root)?.key)
+    }
+    // 获取指定树中最大的key所在的节点
+    func getMaxNode(node: TreeNode?) -> TreeNode? {
+        var n = node
+        while n?.right != nil {
+            n = n?.right
+        }
+        return n
+        
+//        if node?.right != nil {
+//            return getMaxNode(node: node?.right)
+//        } else {
+//            return node
+//        }
+    }
+    
+    // 前序遍历
+    func preErgodic() -> Queue<String> {
+        var queue = Queue<String>()
+        preErgodic(node: root, queue: &queue)
+        return queue
+    }
+    func preErgodic(node: TreeNode?, queue: inout Queue<String>) {
+        if node == nil {
+            return
+        }
+        queue.enQueue(item: node?.key ?? "")
+        if node?.left != nil {
+            preErgodic(node: node?.left, queue: &queue)
+        }
+        if node?.right != nil {
+            preErgodic(node: node?.right, queue: &queue)
+        }
+    }
+    
+    // 中序遍历
+    func middleErgodic() -> Queue<String> {
+        var queue = Queue<String>()
+        middleErgodic(node: root, queue: &queue)
+        return queue
+    }
+    func middleErgodic(node: TreeNode?, queue: inout Queue<String>) {
+        if node == nil {
+            return
+        }
+        if node?.left != nil {
+            // 通过递归把左子树中的所有键放入队列中
+            middleErgodic(node: node?.left, queue: &queue)
+        }
+        // 将节点的键放入队列中
+        queue.enQueue(item: node?.key ?? "")
+        if node?.right != nil {
+            // 通过递归把右子树中的所有键放入队列中
+            middleErgodic(node: node?.right, queue: &queue)
+        }
+    }
+    
+    // 后序遍历
+    func afterErgodic() -> Queue<String> {
+        var queue = Queue<String>()
+        afterErgodic(node: root, queue: &queue)
+        return queue
+    }
+    func afterErgodic(node: TreeNode?, queue: inout Queue<String>) {
+        if node == nil {
+            return
+        }
+        if node?.left != nil {
+            afterErgodic(node: node?.left, queue: &queue)
+        }
+        if node?.right != nil {
+            afterErgodic(node: node?.right, queue: &queue)
+        }
+        queue.enQueue(item: node?.key ?? "")
+    }
+    
+    // 层序遍历
+    func layerErgodic() -> Queue<String> {
+        var keyQueue = Queue<String>()
+        var nodeQueue = Queue<TreeNode>()
+        nodeQueue.enQueue(item: root!)
+        while !nodeQueue.isEmpty() {
+            let node = nodeQueue.deQueue()
+            keyQueue.enQueue(item: node!.key)
+            if node?.left != nil {
+                nodeQueue.enQueue(item: (node?.left)!)
+            }
+            if node?.right != nil {
+                nodeQueue.enQueue(item: (node?.right)!)
+            }
+        }
+        return keyQueue
     }
 }
