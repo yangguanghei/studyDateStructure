@@ -63,6 +63,9 @@ extension ViewController {
         print("========层序遍历==========")
         let queue3 = binaryTree.layerErgodic()
         queue3.printQueue()
+        print("最大深度")
+        let dep = binaryTree.maxDepth()
+        print("\(dep)")
     }
     
     /// 测试获取二叉树最小/最大key

@@ -218,4 +218,29 @@ class BinaryTree {
         }
         return keyQueue
     }
+    
+    // 树的最大深度
+    func maxDepth() -> Int {
+        return maxDepth(node: root)
+    }
+    func maxDepth(node: TreeNode?) -> Int {
+        if node == nil {
+            return 0
+        }
+        var max = 0
+        var maxL = 0
+        var maxR = 0
+        if node?.left != nil {
+            maxL = maxDepth(node: node?.left)
+        }
+        if node?.right != nil {
+            maxR = maxDepth(node: node?.right)
+        }
+        if maxL > maxR {
+            max = maxL + 1
+        } else {
+            max = maxR + 1
+        }
+        return max
+    }
 }
