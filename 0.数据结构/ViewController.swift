@@ -18,7 +18,8 @@ class ViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        testErgodic()
+        testHeap()
+//        testErgodic()
 //        testGetMinMaxKey()
 //        testBinaryTree()
 //        testOrderSymbolTable()
@@ -37,6 +38,25 @@ class ViewController: UIViewController {
 }
 
 extension ViewController {
+    
+    /// 测试堆
+    private func testHeap() {
+        let heap = Heap(capacity: 10)
+        heap.insert(t: "A")
+        heap.insert(t: "B")
+        heap.insert(t: "C")
+        heap.insert(t: "D")
+        heap.insert(t: "E")
+        heap.insert(t: "F")
+        heap.insert(t: "G")
+        
+        heap.printHeap()
+        print("==========")
+        while heap.N != 0 {
+            let result = heap.deleteMax()
+            print(result)
+        }
+    }
     
     /// 测试二叉树的前、中、后序遍历
     private func testErgodic() {
